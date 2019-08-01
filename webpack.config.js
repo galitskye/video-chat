@@ -7,9 +7,6 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'
     },
-    resolve: {
-        extensions: ['.ts', '.tsx', '.js']
-    },
     module: {
         rules: [
             {
@@ -29,5 +26,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         })
-    ]
+    ],
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js'],
+        alias: {
+            '#src': path.resolve(__dirname, 'src/'),
+            '#theme': path.resolve(__dirname, 'src/theme/'),
+            '#components': path.resolve(__dirname, 'src/components/'),
+        }
+    },
 };
