@@ -6,7 +6,7 @@
   "scripts": {
     "bundle": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack-dev-server --mode development --hot",
     "build": "webpack --mode production",
     "check-types": "tsc"
   },
@@ -35,8 +35,10 @@
     "@types/react": "^16.8.24",
     "@types/react-dom": "^16.8.5",
     "@types/styled-components": "^4.1.18",
+    "@hot-loader/react-dom": "^16.8.6",
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
+    "react-hot-loader": "^4.12.10",
     "tslint": "^5.18.0",
     "tslint-immutable": "^6.0.1",
     "typescript": "^3.5.3",
