@@ -38,7 +38,8 @@ module.exports = {
             '#src': path.resolve(__dirname, 'src/'),
             '#theme': path.resolve(__dirname, 'src/theme/'),
             '#components': path.resolve(__dirname, 'src/components/'),
-            'react-dom': '@hot-loader/react-dom'
+            'react-dom': '@hot-loader/react-dom',
+            'mobx':  path.resolve(__dirname, '/node_modules/mobx/lib/mobx.es6.js')
         }
     },
 };

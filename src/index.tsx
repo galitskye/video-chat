@@ -4,6 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '#components/App';
 
-const HotEntry = hot(App);
+const ReactHotApp = hot(App);
 
-ReactDOM.render(<HotEntry />, document.getElementById('root'));
+ReactDOM.render(<ReactHotApp />, document.getElementById('app'));
