@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../theme';
+import { theme } from '#theme';
 import { Title } from './app-styles';
 
 class App extends PureComponent {
