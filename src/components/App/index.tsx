@@ -1,11 +1,15 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 
-import './index.css';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../../theme';
+import { Title } from './app-styles';
 
 class App extends PureComponent {
     public render(): React.ReactNode {
         return (
-            <h1>Hello World!</h1>
+            <ThemeProvider theme={ theme }>
+                <Title>Hello World!</Title>
+            </ThemeProvider>
         );
     }
 }
