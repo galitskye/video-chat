@@ -2,7 +2,7 @@ import { hot } from 'react-hot-loader/root';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '#components/App';
+import App from '@containers/App';
 
 const ReactHotApp = hot(App);
 

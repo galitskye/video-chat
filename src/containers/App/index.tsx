@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import { theme } from '#theme';
-import { Title } from './app-styles';
+import { theme } from '@theme';
+import Input from "@atoms/input";
 
 class App extends PureComponent {
     public render(): React.ReactNode {
         return (
             <ThemeProvider theme={ theme }>
-                <Title>Hello World!</Title>
+                <Input type='text' />
             </ThemeProvider>
         );
     }

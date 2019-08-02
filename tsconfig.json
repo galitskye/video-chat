@@ -5,15 +5,21 @@
 
     // path to output directory
     "outDir": "./dist/",
+    "legacy": true,
 
     "baseUrl": "./src",
 
     "paths": {
-      "#src/*": ["*"],
-      "#theme": ["theme/index.ts"],
-      "#components/*": ["components/*"]
+      "@src/*": ["*"],
+      "@theme": ["theme/index.ts"],
+      "@components/*": ["components/*"],
+      "@atoms/*": ["components/atoms/*"],
+      "@molecules/*": ["components/molecules/*"],
+      "@organisms/*": ["components/organisms/*"],
+      "@containers/*": ["containers/*"],
+      "@stores/*": ["stores/*"]
     },
-
+    "experimentalDecorators": true,
     // enable strict null checks as a best practice
     "strictNullChecks": true,
 
