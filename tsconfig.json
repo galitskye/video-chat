@@ -11,13 +11,16 @@
 
     "paths": {
       "@src/*": ["*"],
-      "@theme": ["theme/index.ts"],
+      "@theme/*": ["theme/*"],
       "@components/*": ["components/*"],
       "@atoms/*": ["components/atoms/*"],
       "@molecules/*": ["components/molecules/*"],
       "@organisms/*": ["components/organisms/*"],
-      "@containers/*": ["containers/*"],
-      "@stores/*": ["stores/*"]
+      "@templates/*": ["components/templates/*"],
+      "@pages/*": ["components/pages/*"],
+      "@container/*": ["container/*"],
+      "@stores/*": ["stores/*"],
+      "@images/*": ["images/*"]
     },
     "experimentalDecorators": true,
     // enable strict null checks as a best practice
