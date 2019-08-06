@@ -5,6 +5,7 @@
 
     // path to output directory
     "outDir": "./dist/",
+    "sourceMap": true,
     "legacy": true,
 
     "baseUrl": "./src",

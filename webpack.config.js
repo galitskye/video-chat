@@ -37,6 +37,7 @@ module.exports = {
             template: './src/index.html'
         })
     ],
+    devtool: 'source-map',
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         alias: config.aliases

@@ -1,10 +1,13 @@
 import { IThemeStyles } from './types';
 import reset from 'react-style-reset/string';
 import { createGlobalStyle } from 'styled-components';
-import { rem } from './utils';
 
 const GlobalStyles = createGlobalStyle`
     ${reset}
+    
+    * {
+        box-sizing: border-box;
+    }
     
     img {
         max-width: 100%;
@@ -41,12 +44,32 @@ const secondaryColors = {
     coral50: '#7b1e30'
 };
 
-const breakpoints = [rem(540)];
+const breakpointsShort = ['xs','sm', 'md', 'lg', 'xl'];
+
+const breakpoints = {
+    sm: 540,
+    md: 768,
+    lg: 1024,
+    xl: 1440
+};
+
+const spacings = {
+    xs: 9,
+    md: 12,
+    lg: 15,
+};
+
+const containerWidth = 1400;
+
 const fontSizes = ['1.2rem', '1.4rem', '1.6rem', '1.8rem', '2.4rem', '2.8rem', '3.2rem', '4.0rem', '4.8rem', '6.4rem'];
+
 const space = ['0', '.4rem', '.8rem', '1.2rem', '1.6rem', '2.0rem', '3.2rem', '4.8rem', '6.4rem', '9.6rem'];
 
 const theme: IThemeStyles = {
+    breakpointsShort,
     breakpoints,
+    spacings,
+    containerWidth,
     fontSizes,
     space,
     colors,
