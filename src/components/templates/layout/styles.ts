@@ -9,5 +9,4 @@ export const LayoutWrapper = styled.div`
 
 export const Main = styled.main`
     flex-grow: 1;
-    background-color: red;
 `;

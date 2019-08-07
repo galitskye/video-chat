@@ -1,6 +1,5 @@
-import { HTMLProps } from 'react';
-import styled, { StyledFunction } from 'styled-components';
-import { IRow, ICol } from './types';
+import styled from 'styled-components';
+import { IRowProps, IColProps } from './types';
 import {rem, calcCol, media, spacing} from '@theme/utils';
 
 export const Container = styled.div`
@@ -12,9 +11,7 @@ export const Container = styled.div`
     }
 `;
 
-const row: StyledFunction<IRow & HTMLProps<HTMLDivElement>> = styled.div;
-
-export const Row = row`
+export const Row = styled.div<IRowProps>`
     display: flex;
     
     ${
@@ -26,9 +23,9 @@ export const Row = row`
     }
 `;
 
-export const Col = styled.div`
+export const Col = styled.div<IColProps>`
     ${
-        (props: ICol) => {
+        (props) => {
             const { theme } = props;
             let styles: string = '';
             

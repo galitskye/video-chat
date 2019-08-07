@@ -1,12 +1,12 @@
 import {IThemeStyles} from '@theme/types';
 import {ReactNode} from 'react';
 
-export interface IRow {
+export interface IRowProps {
     styles?: (theme: IThemeStyles) => string;
     container?: boolean;
 }
 
-export interface ICol {
+export interface IColProps {
     [key: string]: number | IThemeStyles | undefined | ReactNode;
     theme: IThemeStyles;
     children?: ReactNode;
