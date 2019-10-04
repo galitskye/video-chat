@@ -1,5 +1,5 @@
 import {IThemeStyles} from '@theme/types';
-import {TSpacing} from './types';
+import {TSpacing, THexToRgb} from './types';
 
 export const rem = (width: number, difference: number = 0): string => (
     `${(Number(width) + difference) / 16}rem`
@@ -36,4 +36,21 @@ export const media = (theme: IThemeStyles, point: string, styles: string): strin
             ${styles}
         }
     `
+};
+
+export const hexToRgb = (hex: string): THexToRgb => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+};
+
+export const toRgba = (color: string, opacity: number): string => {
+    const colorInRgb: THexToRgb = hexToRgb(color);
+
+    return colorInRgb ?
+        `rgba(${colorInRgb.r},${colorInRgb.g},${colorInRgb.b},${opacity})` : color;
 };

@@ -1,5 +1,5 @@
 import { IThemeStyles } from './types';
-import reset from 'react-style-reset/string';
+import reset from 'react-style-reset';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -59,7 +59,7 @@ const spacings = {
     lg: 15,
 };
 
-const containerWidth = 1400;
+const containerWidth = 1280;
 
 const fontSizes = ['1.2rem', '1.4rem', '1.6rem', '1.8rem', '2.4rem', '2.8rem', '3.2rem', '4.0rem', '4.8rem', '6.4rem'];
 

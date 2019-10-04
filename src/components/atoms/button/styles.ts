@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IThemeStyles } from '@theme';
+import { IThemeStyles } from '@src/theme';
 
 const DefaultButtonStyles = (theme: IThemeStyles) => (`
     font-size: ${theme.fontSizes[0]};

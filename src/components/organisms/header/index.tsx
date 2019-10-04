@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 
 import Logo from '@atoms/logo';
 import { Container, Row, Col } from '@theme/grid';
-import { rowStyles } from './styles';
+import {
+    StyledHeader,
+    rowStyles
+} from './styles';
 
 const Header: FC = (): JSX.Element => (
-    <header>
+    <StyledHeader>
         <Container>
             <Row styles={rowStyles}>
                 <Col>
@@ -24,7 +27,7 @@ const Header: FC = (): JSX.Element => (
                 </Col>
             </Row>
         </Container>
-    </header>
+    </StyledHeader>
 );
 
 export default Header;

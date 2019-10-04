@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: config.entry,
     output: config.output,
+    watch: true,
     module: {
         rules: [
             {

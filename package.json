@@ -2,7 +2,7 @@
   "name": "video-chat",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./server/index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --hot",
     "build": "webpack --mode production",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/galitskye/video-chat#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "mobx": "^5.13.0",
     "mobx-react": "^6.1.1",
     "react": "^16.8.6",
