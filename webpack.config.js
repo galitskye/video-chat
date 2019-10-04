@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: config.entry,
     output: config.output,
+    watch: true,
     module: {
         rules: [
             {
@@ -12,6 +13,18 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 },
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            disable: true
+                        },
+                    },
+                ],
             }
         ]
     },
@@ -25,6 +38,7 @@ module.exports = {
             template: './src/index.html'
         })
     ],
+    devtool: 'source-map',
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         alias: config.aliases

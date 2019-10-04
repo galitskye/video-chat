@@ -1,14 +1,12 @@
 import { observable } from 'mobx';
 
 class ApplicationStore {
-    @observable themeMode: string = 'light';
+    @observable listArr: string[] = [];
 
-    changeThemeMode() {
-        if (this.themeMode === 'light') {
-            this.themeMode = 'dark';
-            return;
-        }
-
-        this.themeMode = 'light';
+    addToList(item: string) {
+        this.listArr.push(item);
     }
 }
+
+
+export default ApplicationStore;
