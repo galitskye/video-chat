@@ -1,17 +1,25 @@
-// const path = require('path');
+const path = require('path');
 const aliases = require('./aliases');
-const path = process.cwd();
+
+const rootDirectory = path.join(__dirname, '..');
+
+const distDirectory = path.join(rootDirectory, 'dist');
 
 const serverPort = 3000;
 
-const entry = [`${path}/src/index`];
+const entry = {
+    app: [path.join(rootDirectory, 'src/index')]
+};
 
 const output = {
-    path: `${path}/dist`,
-    filename: 'bundle.js'
+    path: distDirectory,
+    publicPath: '/js/',
+    filename: '[name].js'
 };
 
 module.exports = {
+    rootDirectory,
+    distDirectory,
     serverPort,
     entry,
     output,

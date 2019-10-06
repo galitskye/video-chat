@@ -3,7 +3,7 @@ import { toRgba } from "@theme/utils";
 
 export const rowStyles = () => (
     `
-        align-items: center;
+        align-items: flex-end;
     `
 );
 

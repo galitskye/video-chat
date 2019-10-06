@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: config.entry,
     output: config.output,
-    watch: true,
+    mode: 'production',
     module: {
         rules: [
             {
@@ -29,7 +29,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: `${__dirname}/dist`,
+        contentBase: config.distDirectory,
         port: 9000,
         hot: true
     },
